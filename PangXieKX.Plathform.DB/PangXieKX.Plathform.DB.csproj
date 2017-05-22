@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{662863FD-91D1-4CDA-BF8D-AC0087DD5EE4}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PangXieKX.Plathform.DB</RootNamespace>
+    <AssemblyName>PangXieKX.Plathform.DB</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.8\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DapperExtensions\DapperExtension.cs" />
+    <Compile Include="DapperExtensions\DapperExtensionsConfiguration.cs" />
+    <Compile Include="DapperExtensions\DapperImplementor.cs" />
+    <Compile Include="DapperExtensions\GetMultiplePredicate.cs" />
+    <Compile Include="DapperExtensions\GetMultipleResult.cs" />
+    <Compile Include="DapperExtensions\ISort.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\ConstantExtractor.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\DelegateGenerator.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\Expression.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\ExpressionComparer.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\ExpressionHasher.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\ExpressionToClip.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\ExpressionVisitor.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\FastEvaluator.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\HashedListCache.cs" />
+    <Compile Include="DapperExtensions\Lambda\Expression\IExpressionCache.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaDeleteHelper.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaInsertHelper.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaQueryHelper.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\GroupBy\GroupByClip.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\OrderBy\IOrderBy.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\OrderBy\OrderBy.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\OrderBy\OrderByClip.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\Select\ISelect.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\Select\Select.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\Where\IWhere.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\Where\Where.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaSql\Where\WhereClip.cs" />
+    <Compile Include="DapperExtensions\Lambda\LambdaUpdateHelper.cs" />
+    <Compile Include="DapperExtensions\Lambda\Model\Entity.cs" />
+    <Compile Include="DapperExtensions\Lambda\Model\Field.cs" />
+    <Compile Include="DapperExtensions\Lambda\Model\FieldExtend.cs" />
+    <Compile Include="DapperExtensions\Lambda\Model\Parameter.cs" />
+    <Compile Include="DapperExtensions\Mapper\AutoClassMapper.cs" />
+    <Compile Include="DapperExtensions\Mapper\ClassMapper.cs" />
+    <Compile Include="DapperExtensions\Mapper\PluralizedAutoClassMapper.cs" />
+    <Compile Include="DapperExtensions\Mapper\PropertyMap.cs" />
+    <Compile Include="DapperExtensions\Predicates.cs" />
+    <Compile Include="DapperExtensions\ReflectionHelper.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\MySqlDialect.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\OracleDialect.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\Other\PostgreSqlDialect.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\Other\SqliteDialect.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\SqlCeDialect.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\SqlDialectBase.cs" />
+    <Compile Include="DapperExtensions\Sql\Dialect\SqlServerDialect.cs" />
+    <Compile Include="DapperExtensions\Sql\SqlGenerator.cs" />
+    <Compile Include="DapperExtensions\ValueObject\CommonEnum\ColumnFunction.cs" />
+    <Compile Include="DapperExtensions\ValueObject\CommonEnum\JoinType.cs" />
+    <Compile Include="DapperExtensions\ValueObject\CommonEnum\OrderByOperater.cs" />
+    <Compile Include="DapperExtensions\ValueObject\CommonEnum\QueryOperator.cs" />
+    <Compile Include="DapperExtensions\ValueObject\CommonEnum\WhereType.cs" />
+    <Compile Include="Dapper\SqlMapper.cs" />
+    <Compile Include="Dapper\SqlMapperAsync.cs" />
+    <Compile Include="DBSession.cs" />
+    <Compile Include="DbUtils\DataReaderExtensions.cs" />
+    <Compile Include="DbUtils\DataUtils.cs" />
+    <Compile Include="DbUtils\DbColumnAttribute.cs" />
+    <Compile Include="DbUtils\DBUtils.cs" />
+    <Compile Include="DbUtils\DynamicCalls.cs" />
+    <Compile Include="DbUtils\SerializationManager.cs" />
+    <Compile Include="IDBSession.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IDataRepository.cs" />
+    <Compile Include="Repository\RepositoryBase.cs" />
+    <Compile Include="Repository\RepositoryServiceBase.cs" />
+    <Compile Include="SqlHelper\IDBHelper.cs" />
+    <Compile Include="SqlHelper\MySqlDBHelper\MySqlAdaptor.cs" />
+    <Compile Include="SqlHelper\MySqlDBHelper\MySqlHelper.cs" />
+    <Compile Include="SqlHelper\OracleDBHelper\OracleAdaptor.cs" />
+    <Compile Include="SqlHelper\OracleDBHelper\OracleHelper.cs" />
+    <Compile Include="SqlHelper\PageHelper\PageHelper.cs" />
+    <Compile Include="SqlHelper\SqlDBHelper\DBAdaptor.cs" />
+    <Compile Include="SqlHelper\SqlDBHelper\SQLHelper.cs" />
+    <Compile Include="Tool\Common.cs" />
+    <Compile Include="Transactions\Transaction.cs" />
+    <Compile Include="Transactions\TransactionScope.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Dapper\ReadMe.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
